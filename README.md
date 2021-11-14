@@ -3,7 +3,7 @@ TJ Alo\
 Joshua Singer\
 Alvin Hsu\
 Yusuf Morsi\
-Hannah Samuel\
+Hannah Samuel
 
 
 ## Tools 
