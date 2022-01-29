@@ -1,6 +1,6 @@
 # CSForeachers
 TJ Alo\
-Joshua Singer\
+Joshua nger\
 Alvin Hsu\
 Yusuf Morsi\
 Hannah Samuel
