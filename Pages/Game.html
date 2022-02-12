@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
+        <title> Game Map </title>
+        <link rel='stylesheet' href="../CSS/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <img src='../logo.PNG' alt='logo'> 
+        <h1>Learning Computer Science</h1>
+        <p>Teaching introductory code through interactive games (description)</p>
+        <center>
+        <button class="button"><a href="Pages/Learn.html">Learn</a></button>
+        <button class="button button2"><a href="Pages/Progress.html">Progress</a></button>
+        <button class="button button3"><a href = "Pages/Account.html">Account</a></button>
+        <center/>
+        <div class="container">
+            <div class="row">
+                <div class="col-9"> <img src="../img/gameMap.jpg" class="img-fluid w-100" alt="Game Map"> </div>
+                <div class="col-2"> <img src="../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
+            </div>
+            <div class="row">
+                <div class="col justify-content-left">
+                    <form>
+                        <p id="question">Which of these options would you like to chose?</p>
+                        <input type="checkbox" id="optionA" name="optionA" value="A">
+                        <label for="optionA"> Option A </label><br>
+                        <input type="checkbox" id="optionB" name="optionB" value="B">
+                        <label for="optionB"> Option B </label><br>
+                        <input type="checkbox" id="optionC" name="optionC" value="C">
+                        <label for="optionC"> Option C </label><br>
+                        <input type="checkbox" id="optionD" name="optionD" value="D">
+                        <label for="optionD"> Option D </label><br><br>
+                        <input type="submit" value="Submit"><br><br>
+                    </form>
+                </div>
+            </div>
+            <div class="row justify-content-end"> <button type="button" class="btn btn-success"> Next Activity </button> </div>
+        </div>
+    </body>
+</html>
