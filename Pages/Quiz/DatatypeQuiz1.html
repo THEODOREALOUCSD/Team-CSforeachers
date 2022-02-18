@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
+        <title> Game Map </title>
+        <link rel='stylesheet' href="../CSS/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+     
+h1 {
+    font-size: 3vw;
+    
+}
+
+p{
+    font-size: 2vw;
+     text-align: left;
+}
+body{
+    background-image: linear-gradient(to left,rgb(163, 169, 240),rgb(0, 153, 255), rgb(219, 111, 178),rgb(177, 79, 216) );
+    opacity : 1;
+}
+img{
+    
+    border-radius: 100px;
+    padding: 5px;
+    width: 250px;
+    height: 80px;
+    float: left;
+  
+}
+
+.button{
+    background-color:rgb(202, 147, 224) ;
+    font-size: 40px; 
+    position: relative;
+    left: 20px;
+    visibility: hidden;
+    
+}
+.button1{
+    background-color:rgb(202, 147, 224) ;
+    font-size: 40px; 
+    position: relative;
+    left: 600px; 
+    visibility: hidden;
+}
+a{
+    text-decoration: none;
+}
+
+form {
+    text-align: left;
+    padding-left: 5%;
+    margin: 20px;
+    border-style: solid;
+    border-width: 5px;
+}
+    </style>
+    </head>
+    <body>
+        
+        <h1>DatatypeQuiz</h1>
+        
+     
+        <div class="container">
+            <div class="row">
+                <div class="col-9"> <img src="../Board Game.PNG" class="img-fluid w-100" alt="Game Map"> </div>
+                <div class="col-2"> <img src="../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
+            </div>
+            <div class="row">
+                <div class="col justify-content-left">
+                    <form onsubmit="return false">
+                        
+                        <p id="question">Question 1: *inset character name here* went to visit the doctor’s office today. The nurse asked *insert name* to step on the scale to measure weight. The scale read 89.5 pounds. The nurse has been asked to store this data on a computer to keep track of the weight over the years. If we want to store 89.5 into a data type, which of the following would be the correct way for the nurse to do this?
+                        </p>
+                        <button type="button1" onclick="myFunction1()">double weight = 89.5</button>
+                        <p1 id = "demo1"></p1>
+                        <br>
+                        <br>
+                        <script>
+                            let heart = 6;
+                            let questionNum = 0;
+                            let score = 0;
+                            document.getElementById("demo1".clicked == false);
+
+                            function myFunction1() {
+                                document.getElementById("demo1").innerHTML = "Correct!";
+                                document.getElementById("demo2").innerHTML = "";
+                                document.getElementById("demo3").innerHTML = "";
+                                document.getElementById("demo4").innerHTML = "";
+                                
+
+                                
+                                questionNum++;
+                                myFunction5();
+                                alreadGotitRight();
+                                }
+                        </script>
+                        <button type="button2" onclick="myFunction2()">String weight = 89.5</button>
+                        <p2 id = "demo2"></p2>
+                        <br>
+                        <br>
+                        <script>
+                            function myFunction2() {
+                                console.log(heart);
+                                document.getElementById("demo2").innerHTML = "wrong, try again!";
+                                document.getElementById("demo1").innerHTML = "";
+                                document.getElementById("demo3").innerHTML = "";
+                                document.getElementById("demo4").innerHTML = "";
+                                heart+= -1;
+                                checkifLost();
+                                }
+                        </script>
+
+                        <button type="button3" onclick="myFunction3()">boolean weight = 89.5
+</button>
+                        <p3 id = "demo3"></p3>
+                        <br>
+                        <br>
+                        <script>
+                            function myFunction3() {
+                                console.log(heart);
+                                document.getElementById("demo3").innerHTML = "wrong, try again!";
+                                document.getElementById("demo2").innerHTML = "";
+                                document.getElementById("demo1").innerHTML = "";
+                                document.getElementById("demo4").innerHTML = "";
+                                heart+= -1;
+                                checkifLost();
+                                }
+                        </script>
+                        <button type="button4" onclick="myFunction4()">int weight = 89.5</button>
+                        <p4 id = "demo4"></p4>
+                        <br>
+                        <br>
+                        <script>
+                            function myFunction4() {
+                                console.log(heart);
+                                document.getElementById("demo4").innerHTML = "wrong, try again!";
+                                document.getElementById("demo2").innerHTML = "";
+                                document.getElementById("demo3").innerHTML = "";
+                                document.getElementById("demo1").innerHTML = "";
+                                heart+= -1;
+                                checkifLost();
+                                }
+                        </script>
+                        <script>
+                            
+                            function myFunction5(){
+                                console.log("Hi");
+                                if(document.getElementById("demo1").innerHTML == "Correct!"){
+                                //    window.location.href = "http://127.0.0.1:5500/Pages/Pages/DatatypeQuiz2.html";
+                                document.getElementById("next").style.visibility = "visible";
+                                // document.getElementById("demo2").innerHTML = "";
+                                // document.getElementById("demo3").innerHTML = "";
+                                // document.getElementById("demo4").innerHTML = "";
+                                }
+                                
+                               
+                            }
+                            function alreadGotitRight(){
+                                if(document.getElementById("demo1").innerHTML == "Correct!"){
+                                
+                               
+                                document.getElementById("demo2").innerHTML = "";
+                                document.getElementById("demo3").innerHTML = "";
+                                document.getElementById("demo4").innerHTML = "";
+                                }
+
+                            }
+                            function checkifLost(){
+                                if(heart == 0){
+                                    // restart game
+                                    // a button appears to return back to the learn page
+                                    document.getElementById("back").style.visibility = "visible";
+                                    document.getElementById("next").style.visibility = "hidden";
+                                }
+                            }
+
+                        </script>
+                        
+                        
+                    </form>
+                </div>
+            </div>
+            
+                            
+            <!-- <div class="row justify-content-end"> <button type="button" class="btn btn-success"><a href="Pages/Learn.html"></a> Next Activity </button> </div> -->
+            <button class="button" id = "back"><a href="Learn.html">Back to Learn</a></button>
+            <button class="button1" id = "next"><a href="DatatypeQuiz2.html">Next Activity</a></button>
+
+            <!-- <button class="button1" id = "next"><a href = "Pages/Progress">Next Activity</a></button> -->
+        </div>
+   
+    </body>
+</html>
