@@ -61,21 +61,26 @@ form {
     </head>
     <body>
         
-        <h1>Variable Quiz</h1>
+        <h1>For Loops Quiz</h1>
         
      
         <div class="container">
             <div class="row">
-                <div class="col-9"> <img src="Question3.png" class="img-thumbnail w-100" alt="Game Map"> </div>
+                <div class="col-9"> <img src="Question12.png" class="img-thumbnail w-100" alt="Game Map"> </div>
                 <div class="col-2"> <img src="../../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
             </div>
             <div class="row">
                 <div class="col justify-content-left">
                     <form onsubmit="return false">
                         
-                        <p id="question">Question 1: Maria has earned 5 dollars for cleaning her room. She saves her money in a bank called "piggy." Piggy is a container that keep all of Maria's money safe and has a secret passcode for when Maria wants to open the bank to use the money. Which line of code represents her container?
+                        <p id="question">Question 3: James bought a new washing machine. It allows him to enter a specific amount of minutes he needs to wash his clothes. If James put the machine to run for 15 minutes, which answer choice best represents this?
+
                         </p>
-                        <button type="button1" onclick="myFunction1()"> Maria = 5</button>
+                        <button type="button1" onclick="myFunction1()"> for( time = 15; time> 1; time--){
+                            <BR>
+                              (print( time + "minutes left")) }
+
+                        </button>
                         <p1 id = "demo1"></p1>
                         <br>
                         <br>
@@ -84,37 +89,43 @@ form {
                             let questionNum = 0;
                             let score = 0;
 
-                            function myFunction1() {
+                            function myFunction1()  {
                                 document.getElementById("demo1").innerHTML = "wrong, try again!";
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                
-
                                 heart+= -1;
                                 checkifLost();
                                 r();
+                               
                                 }
                         </script>
-                        <button type="button2" onclick="myFunction2()"> 5 = piggy</button>
+                        <button type="button2" onclick="myFunction2()">for( time = 15; time >= 0; time--){
+                            <BR>
+                              (print( time + "minutes left")) }
+                            
+                           </button>
                         <p2 id = "demo2"></p2>
                         <br>
                         <br>
                         <script>
                             function myFunction2() {
                                 console.log(heart);
-                                document.getElementById("demo2").innerHTML = "wrong, try again!";
+                                document.getElementById("demo2").innerHTML = "Correct!";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
-                                checkifLost();
-                                r();
+                                questionNum++;
+                                myFunction5();
+                                alreadGotitRight();
                                 }
                         </script>
 
-                        <button type="button3" onclick="myFunction3()"> int Maria = 5
-</button>
+                        <button type="button3" onclick="myFunction3()">
+                            
+                            for( time = 0; time> 1; time--){
+                                <BR>
+                                  (print( time + "minutes left")) }</button>
                         <p3 id = "demo3"></p3>
                         <br>
                         <br>
@@ -125,33 +136,34 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                               
                                 heart+= -1;
                                 checkifLost();
                                 r();
                                 }
                         </script>
-                        <button type="button4" onclick="myFunction4()"> int piggy = 5;</button>
+                        <button type="button4" onclick="myFunction4()"> for( time = 10; time>= 0; time--){
+                            <BR>
+                              (print( time + "minutes left")) }</button>
                         <p4 id = "demo4"></p4>
                         <br>
                         <br>
                         <script>
                             function myFunction4() {
                                 console.log(heart);
-                                document.getElementById("demo4").innerHTML = "Correct!";
+                                document.getElementById("demo4").innerHTML = "wrong, try again!";
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
-                                questionNum++;
-                                myFunction5();
-                                alreadGotitRight();
+                                heart+= -1;
+                                checkifLost();
+                                r();
                                 }
                         </script>
                         <script>
                             
                             function myFunction5(){
                                 console.log("Hi");
-                                if(document.getElementById("demo4").innerHTML == "Correct!"){
+                                if(document.getElementById("demo2").innerHTML == "Correct!"){
                                 //    window.location.href = "http://127.0.0.1:5500/Pages/Pages/DatatypeQuiz2.html";
                                 document.getElementById("next").style.visibility = "visible";
                                 // document.getElementById("demo2").innerHTML = "";
@@ -162,12 +174,12 @@ form {
                                
                             }
                             function alreadGotitRight(){
-                                if(document.getElementById("demo4").innerHTML == "Correct!"){
+                                if(document.getElementById("demo2").innerHTML == "Correct!"){
                                 
                                
-                                document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
+                                document.getElementById("demo4").innerHTML = "";
                                 }
 
                             }
@@ -181,7 +193,7 @@ form {
                             }
 
                         </script>
-                          </script>
+                        
                           <p10 id = "demo10"></p10>
   
                           <script>
@@ -196,13 +208,11 @@ form {
                         
                     </form>
                 </div>
-            </div>
-            
-                            
+            </div>                  
             <!-- <div class="row justify-content-end"> <button type="button" class="btn btn-success"><a href="Pages/Learn.html"></a> Next Activity </button> </div> -->
             <button class="button" id = "back"><a href="Learn.html">Back to Learn</a></button>
             
-            <button class="button1" id = "next"><a href = "VariableQuiz2.html">Next Activity</a></button>
+            <button class="button1" id = "next"><a href = "Learn.html">Next Activity</a></button>
         </div>
    
     </body>

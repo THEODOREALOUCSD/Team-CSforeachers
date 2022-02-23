@@ -61,19 +61,22 @@ form {
     </head>
     <body>
         
-        <h1>DatatypeQuiz</h1>
+        <h1>Datatype Quiz</h1>
         
      
         <div class="container">
             <div class="row">
-                <div class="col-9"> <img src="../Board Game.PNG" class="img-fluid w-100" alt="Game Map"> </div>
-                <div class="col-2"> <img src="../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
+                <div class="col-9"> <img src="Question1.png" class="img-thumbnail w-100" alt="Game Map"> </div>
+                <div class="col-2"> <img src="../../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
             </div>
             <div class="row">
                 <div class="col justify-content-left">
                     <form onsubmit="return false">
                         
-                        <p id="question">Question 2:*inset character name here* went to school today to take an important exam. The teacher decided to check if the student had done their homework the night before. She began to go around the class room writing done if Student A had their homework (true) or they did not (false). Luckily “*inset character name here* did do the homework so the teacher writies this into the computer. Which of the following is the correct representation of this scenario?
+                        <p id="question">Question 2:Mike went to school today to take an important exam.
+                             The teacher decided to check if the student had done their homework the night
+                              before. She began to go around the class room writing done if Student A had 
+                              their homework (true) or they did not (false). Luckily Mike did do the homework so the teacher writes this into the computer. Which of the following is the correct representation of this scenario?
 
                         </p>
                         <button type="button1" onclick="myFunction1()">boolean homeowork = true</button>
@@ -112,11 +115,11 @@ form {
                                 document.getElementById("demo4").innerHTML = "";
                                 heart+= -1;
                                 checkifLost();
+                                r();
                                 }
                         </script>
 
-                        <button type="button3" onclick="myFunction3()"> int homework = true
-</button>
+                        <button type="button3" onclick="myFunction3()"> int homework = true</button>
                         <p3 id = "demo3"></p3>
                         <br>
                         <br>
@@ -129,6 +132,7 @@ form {
                                 document.getElementById("demo4").innerHTML = "";
                                 heart+= -1;
                                 checkifLost();
+                                r();
                                 }
                         </script>
                         <button type="button4" onclick="myFunction4()">double homework = false</button>
@@ -144,6 +148,7 @@ form {
                                 document.getElementById("demo1").innerHTML = "";
                                 heart+= -1;
                                 checkifLost();
+                                r();
                                 }
                         </script>
                         <script>
@@ -180,7 +185,18 @@ form {
                             }
 
                         </script>
-                        
+                          </script>
+                          <p10 id = "demo10"></p10>
+  
+                          <script>
+                              function r(){
+                                  if(heart == 0){
+                                  document.getElementById("demo10").style.visibility = "visible";
+                                  document.getElementById("demo10").innerHTML = "You died, go back and learn to try again";
+  
+                                  }
+                              }
+                          </script>
                         
                     </form>
                 </div>

@@ -61,21 +61,27 @@ form {
     </head>
     <body>
         
-        <h1>Variable Quiz</h1>
+        <h1>If Else Quiz</h1>
         
      
         <div class="container">
             <div class="row">
-                <div class="col-9"> <img src="Question3.png" class="img-thumbnail w-100" alt="Game Map"> </div>
+                <div class="col-9"> <img src="Question9.png" class="img-thumbnail w-100" alt="Game Map"> </div>
                 <div class="col-2"> <img src="../../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
             </div>
             <div class="row">
                 <div class="col justify-content-left">
                     <form onsubmit="return false">
                         
-                        <p id="question">Question 1: Maria has earned 5 dollars for cleaning her room. She saves her money in a bank called "piggy." Piggy is a container that keep all of Maria's money safe and has a secret passcode for when Maria wants to open the bank to use the money. Which line of code represents her container?
+                        <p id="question">Question 3: Ronald is planning an exciting vacation with his family. He explains to his family that if we take a vacation in the summer then we should to Hawaii. But if we go on vacation in the fall, then we should go to Texas. Or if we go on vacation in the winter, then we should go to New York. Which condition satisfies this case?
+                             
                         </p>
-                        <button type="button1" onclick="myFunction1()"> Maria = 5</button>
+                        <button type="button1" onclick="myFunction1()"> if(vacation == summer){ print("We are going to Hawaii")}
+                        <br>
+                        else if(vacation == fall){ print("We are going to New York")}
+                        <Br>
+                        else if( vacation == winter){ We are going to Texas}
+                        </button>
                         <p1 id = "demo1"></p1>
                         <br>
                         <br>
@@ -96,7 +102,11 @@ form {
                                 r();
                                 }
                         </script>
-                        <button type="button2" onclick="myFunction2()"> 5 = piggy</button>
+                        <button type="button2" onclick="myFunction2()"> if(vacation != summer){ print("We are going to Hawaii")}
+                            <br>
+                            else if(vacation == fall){ print("We are going to New York")}
+                            <Br>
+                            else if( vacation == winter){ We are going to Texas}</button>
                         <p2 id = "demo2"></p2>
                         <br>
                         <br>
@@ -113,8 +123,11 @@ form {
                                 }
                         </script>
 
-                        <button type="button3" onclick="myFunction3()"> int Maria = 5
-</button>
+                        <button type="button3" onclick="myFunction3()"> if(vacation == winter){ print("We are going to Hawaii")}
+                            <br>
+                            else if(vacation == fall){ print("We are going to New York")}
+                            <Br>
+                            else if( vacation == winter){ We are going to Texas}</button>
                         <p3 id = "demo3"></p3>
                         <br>
                         <br>
@@ -131,7 +144,11 @@ form {
                                 r();
                                 }
                         </script>
-                        <button type="button4" onclick="myFunction4()"> int piggy = 5;</button>
+                        <button type="button4" onclick="myFunction4()"> if(vacation == summer){ print("We are going to Hawaii")}
+                            <br>
+                            else if(vacation == fall){ print("We are going to Texas")}
+                            <Br>
+                            else if( vacation == winter){ We are going to New York}</button>
                         <p4 id = "demo4"></p4>
                         <br>
                         <br>
@@ -202,7 +219,7 @@ form {
             <!-- <div class="row justify-content-end"> <button type="button" class="btn btn-success"><a href="Pages/Learn.html"></a> Next Activity </button> </div> -->
             <button class="button" id = "back"><a href="Learn.html">Back to Learn</a></button>
             
-            <button class="button1" id = "next"><a href = "VariableQuiz2.html">Next Activity</a></button>
+            <button class="button1" id = "next"><a href = "Learn.html">Next Activity</a></button>
         </div>
    
     </body>

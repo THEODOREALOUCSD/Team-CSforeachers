@@ -66,14 +66,14 @@ form {
      
         <div class="container">
             <div class="row">
-                <div class="col-9"> <img src="../Board Game.PNG" class="img-fluid w-100" alt="Game Map"> </div>
-                <div class="col-2"> <img src="../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
+                <div class="col-9"> <img src="Question6.png" class="img-thumbnail w-100" alt="Game Map"> </div>
+                <div class="col-2"> <img src="../../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
             </div>
             <div class="row">
                 <div class="col justify-content-left">
                     <form onsubmit="return false">
                         
-                        <p id="question">Question 1: The letter x represent 10 marbles in 1 jar. In another jar, there are 6 marbles. Sally says its "true" if at least on of the jars had 10 marbles. Which line of code uses the correct operator to show this relationship?
+                        <p id="question">Question 1: The letter x represent 10 marbles in 1 jar. In another jar, there are 6 marbles. Sally says its "true" if at least one of the jars had 10 marbles. Which line of code uses the correct operator to show this relationship?
                         </p>
                         <button type="button1" onclick="myFunction1()"> A&&B</button>
                         <p1 id = "demo1"></p1>
@@ -91,6 +91,7 @@ form {
                                 document.getElementById("demo4").innerHTML = "";
                                 heart+= -1;
                                 checkifLost();
+                                r();
                                
                                 }
                         </script>
@@ -124,6 +125,7 @@ form {
                                 document.getElementById("demo4").innerHTML = "";
                                 heart+= -1;
                                 checkifLost();
+                                r();
                                 }
                         </script>
                         <button type="button4" onclick="myFunction4()"> B >= A</button>
@@ -139,6 +141,7 @@ form {
                                 document.getElementById("demo1").innerHTML = "";
                                 heart+= -1;
                                 checkifLost();
+                                r();
                                 }
                         </script>
                         <script>
@@ -175,7 +178,18 @@ form {
                             }
 
                         </script>
-                        
+                          </script>
+                          <p10 id = "demo10"></p10>
+  
+                          <script>
+                              function r(){
+                                  if(heart == 0){
+                                  document.getElementById("demo10").style.visibility = "visible";
+                                  document.getElementById("demo10").innerHTML = "You died, go back and learn to try again";
+  
+                                  }
+                              }
+                          </script>
                         
                     </form>
                 </div>

@@ -31,6 +31,7 @@ img{
   
 }
 
+
 .button{
     background-color:rgb(202, 147, 224) ;
     font-size: 40px; 
@@ -61,19 +62,20 @@ form {
     </head>
     <body>
         
-        <h1>DatatypeQuiz</h1>
+        <h1>Datatype Quiz</h1>
         
      
         <div class="container">
             <div class="row">
-                <div class="col-9"> <img src="../Board Game.PNG" class="img-fluid w-100" alt="Game Map"> </div>
-                <div class="col-2"> <img src="../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
+                <div class="col-9"> <img src="Question0.png" class="img-thumbnail w-100" alt="Game Map"> </div>
+            
+                <div class="col-2"> <img src="../../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
             </div>
             <div class="row">
                 <div class="col justify-content-left">
                     <form onsubmit="return false">
                         
-                        <p id="question">Question 1: *inset character name here* went to visit the doctor’s office today. The nurse asked *insert name* to step on the scale to measure weight. The scale read 89.5 pounds. The nurse has been asked to store this data on a computer to keep track of the weight over the years. If we want to store 89.5 into a data type, which of the following would be the correct way for the nurse to do this?
+                        <p id="question">Question 1: Candance went to visit the doctor’s office today. The nurse asked Candance to step on the scale to measure weight. The scale read 89.5 pounds. The nurse has been asked to store this data on a computer to keep track of the weight over the years. If we want to store 89.5 into a data type, which of the following would be the correct way for the nurse to do this?
                         </p>
                         <button type="button1" onclick="myFunction1()">double weight = 89.5</button>
                         <p1 id = "demo1"></p1>
@@ -111,11 +113,11 @@ form {
                                 document.getElementById("demo4").innerHTML = "";
                                 heart+= -1;
                                 checkifLost();
+                                r();
                                 }
                         </script>
 
-                        <button type="button3" onclick="myFunction3()">boolean weight = 89.5
-</button>
+                        <button type="button3" onclick="myFunction3()">boolean weight = 89.5</button>
                         <p3 id = "demo3"></p3>
                         <br>
                         <br>
@@ -128,6 +130,7 @@ form {
                                 document.getElementById("demo4").innerHTML = "";
                                 heart+= -1;
                                 checkifLost();
+                                r();
                                 }
                         </script>
                         <button type="button4" onclick="myFunction4()">int weight = 89.5</button>
@@ -143,6 +146,7 @@ form {
                                 document.getElementById("demo1").innerHTML = "";
                                 heart+= -1;
                                 checkifLost();
+                                r();
                                 }
                         </script>
                         <script>
@@ -180,7 +184,18 @@ form {
 
                         </script>
                         
-                        
+                    </script>
+                    <p10 id = "demo10"></p10>
+
+                    <script>
+                        function r(){
+                            if(heart == 0){
+                            document.getElementById("demo10").style.visibility = "visible";
+                            document.getElementById("demo10").innerHTML = "You died, go back and learn to try again";
+
+                            }
+                        }
+                    </script>
                     </form>
                 </div>
             </div>
