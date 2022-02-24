@@ -76,7 +76,7 @@ form {
                         <p id="question">Question 2: Sammy wany to buy a beverage on her way to work. She says, " If the weather is above 70 degrees, then I want to buy a lemonade but If the weather is below 70 degrees then I want to but a hot cocoa" Which condition satisfies the scenario?
                              
                         </p>
-                        <button type="button1" onclick="myFunction1()">if(weather>70){print("I will take a lemonade)}
+                        <button type="button1" id = "b1" onclick="myFunction1();disable();moveOn();">if(weather>70){print("I will take a lemonade)}
                         <br>
                         else{print("I will take a hot cocoa")}
                         </button>
@@ -98,11 +98,12 @@ form {
 
                              
                                 questionNum++;
+                                score+=1;
                                 myFunction5();
                                 alreadGotitRight();
                                 }
                         </script>
-                        <button type="button2" onclick="myFunction2()">if(weather==70){print("I will take a lemonade)}
+                        <button type="button2" id = "b2" onclick="myFunction2();disable();">if(weather==70){print("I will take a lemonade)}
                             <br>
                             else{print("I will take a hot cocoa")}</button>
                         <p2 id = "demo2"></p2>
@@ -115,13 +116,13 @@ form {
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
 
-                        <button type="button3" onclick="myFunction3()"> if(weather<70){print("I will take a lemonade)}
+                        <button type="button3" id = "b3" onclick="myFunction3();disable();"> if(weather<70){print("I will take a lemonade)}
                             <br>
                             else{print("I will take a hot cocoa")}</button>
                         <p3 id = "demo3"></p3>
@@ -134,12 +135,12 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
-                        <button type="button4" onclick="myFunction4()">if(weather!=70){print("I will take a lemonade)}
+                        <button type="button4" id = "b4"onclick="myFunction4();disable();">if(weather!=70){print("I will take a lemonade)}
                             <br>
                             else{print("I will take a hot cocoa")}</button>
                         <p4 id = "demo4"></p4>
@@ -152,7 +153,7 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
@@ -199,9 +200,28 @@ form {
                                   if(heart == 0){
                                   document.getElementById("demo10").style.visibility = "visible";
                                   document.getElementById("demo10").innerHTML = "You died, go back and learn to try again";
-  
+                                  
                                   }
                               }
+                              function disable(){
+                              
+                              if (heart == 0){
+                              document.getElementById("b1").disabled = true;
+                              document.getElementById("b2").disabled = true;
+                              document.getElementById("b3").disabled = true;
+                              document.getElementById("b4").disabled = true;
+                              }
+                              var x = document.getElementById("b1").disabled;
+                              console.log(x);
+                          }
+                          function moveOn(){
+                                if( score > 0){
+                                document.getElementById("b2").disabled = true;
+                                document.getElementById("b3").disabled = true;
+                                document.getElementById("b4").disabled = true;
+
+                                }
+                            }
                           </script>
                         
                     </form>

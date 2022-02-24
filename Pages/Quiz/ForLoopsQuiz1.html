@@ -76,7 +76,7 @@ form {
                         <p id="question">Question 1: Samdrea is a teacher at an elementary school. Right now, its recess time. Student are allowed to play games and rest during this free time. However, when 20 minutes are up, student must be seated in the classroom before the next bell rings. How can you represent this scenario?
                              
                         </p>
-                        <button type="button1" onclick="myFunction1()"> for( time = 0; time < 19; ; time++){
+                        <button type="button1" id = "b1"onclick="myFunction1();disable();"> for( time = 0; time < 19; ; time++){
                             <Br>
                                 (print"It's time to play")}
                         </button>
@@ -95,12 +95,12 @@ form {
                                 document.getElementById("demo4").innerHTML = "";
                                 
 
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
-                        <button type="button2" onclick="myFunction2()">  for( time = 0; time >= 19; ; time++){
+                        <button type="button2" id = "b2"onclick="myFunction2();disable();">  for( time = 0; time >= 19; ; time++){
                             <Br>
                                 (print"It's time to play")}</button>
                         <p2 id = "demo2"></p2>
@@ -113,13 +113,13 @@ form {
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
 
-                        <button type="button3" onclick="myFunction3()">  for( time = 0; time = 20; time++){
+                        <button type="button3" id = "b3"onclick="myFunction3();disable();">  for( time = 0; time = 20; time++){
                             <Br>
                                 (print"It's time to play")}</button>
                         <p3 id = "demo3"></p3>
@@ -133,12 +133,12 @@ form {
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
                                
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
-                        <button type="button4" onclick="myFunction4()">  for( time = 0; time <= 20; ; time++){
+                        <button type="button4" id ="b4" onclick="myFunction4();disable();moveOn();">  for( time = 0; time <= 20;  time++){
                             <Br>
                                 (print"It's time to play")}</button>
                         <p4 id = "demo4"></p4>
@@ -152,6 +152,7 @@ form {
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
                                 questionNum++;
+                                score+=1;
                                 myFunction5();
                                 alreadGotitRight();
                                 }
@@ -201,6 +202,25 @@ form {
   
                                   }
                               }
+                              function disable(){
+                              
+                              if (heart == 0){
+                              document.getElementById("b1").disabled = true;
+                              document.getElementById("b2").disabled = true;
+                              document.getElementById("b3").disabled = true;
+                              document.getElementById("b4").disabled = true;
+                              }
+                              var x = document.getElementById("b1").disabled;
+                              console.log(x);
+                          }
+                          function moveOn(){
+                                if( score > 0){
+                                document.getElementById("b1").disabled = true;
+                                document.getElementById("b3").disabled = true;
+                                document.getElementById("b2").disabled = true;
+
+                                }
+                            }
                           </script>
                         
                     </form>
@@ -211,7 +231,7 @@ form {
             <!-- <div class="row justify-content-end"> <button type="button" class="btn btn-success"><a href="Pages/Learn.html"></a> Next Activity </button> </div> -->
             <button class="button" id = "back"><a href="Learn.html">Back to Learn</a></button>
             
-            <button class="button1" id = "next"><a href = "ForLoops Quiz2.html">Next Activity</a></button>
+            <button class="button1" id = "next"><a href = "ForLoopsQuiz2.html">Next Activity</a></button>
         </div>
    
     </body>

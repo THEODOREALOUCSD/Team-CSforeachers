@@ -73,9 +73,9 @@ form {
                 <div class="col justify-content-left">
                     <form onsubmit="return false">
                         
-                        <p id="question">Question 1: if we sat the letter A is 5 and letter B is 3, then which of the following statment shows the correct relationship between A and B?
+                        <p id="question">Question 1: If we say the letter A is 5 and letter B is 3, then which of the following statment shows the correct relationship between A and B?
                         </p>
-                        <button type="button1" onclick="myFunction1()"> A!=B</button>
+                        <button type="button1" id = "b1"onclick="myFunction1();disable();moveOn();"> A!=B</button>
                         <p1 id = "demo1"></p1>
                         <br>
                         <br>
@@ -91,11 +91,12 @@ form {
                                 document.getElementById("demo4").innerHTML = "";
                                 
                                 questionNum++;
+                                score+=1;
                                 myFunction5();
                                 alreadGotitRight();
                                 }
                         </script>
-                        <button type="button2" onclick="myFunction2()">A==B</button>
+                        <button type="button2" id="b2" onclick="myFunction2();disable();">A==B</button>
                         <p2 id = "demo2"></p2>
                         <br>
                         <br>
@@ -106,13 +107,13 @@ form {
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
 
-                        <button type="button3" onclick="myFunction3()"> A < B</button>
+                        <button type="button3" id = "b3" onclick="myFunction3();disable();"> A < B</button>
                         <p3 id = "demo3"></p3>
                         <br>
                         <br>
@@ -123,12 +124,12 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
-                        <button type="button4" onclick="myFunction4()"> B >= A</button>
+                        <button type="button4" id = "b4" onclick="myFunction4();disable();"> B >= A</button>
                         <p4 id = "demo4"></p4>
                         <br>
                         <br>
@@ -139,7 +140,7 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
@@ -189,6 +190,25 @@ form {
   
                                   }
                               }
+                              function disable(){
+                              
+                              if (heart == 0){
+                              document.getElementById("b1").disabled = true;
+                              document.getElementById("b2").disabled = true;
+                              document.getElementById("b3").disabled = true;
+                              document.getElementById("b4").disabled = true;
+                              }
+                              var x = document.getElementById("b1").disabled;
+                              console.log(x);
+                          }
+                          function moveOn(){
+                                if( score > 0){
+                                document.getElementById("b2").disabled = true;
+                                document.getElementById("b3").disabled = true;
+                                document.getElementById("b4").disabled = true;
+
+                                }
+                            }
                           </script>
                         
                     </form>

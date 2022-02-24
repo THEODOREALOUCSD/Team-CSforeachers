@@ -77,7 +77,7 @@ form {
                         
                         <p id="question">Question 1: Candance went to visit the doctor’s office today. The nurse asked Candance to step on the scale to measure weight. The scale read 89.5 pounds. The nurse has been asked to store this data on a computer to keep track of the weight over the years. If we want to store 89.5 into a data type, which of the following would be the correct way for the nurse to do this?
                         </p>
-                        <button type="button1" onclick="myFunction1()">double weight = 89.5</button>
+                        <button type="button1" id = "b1" onclick="myFunction1();disable();moveOn();">double weight = 89.5</button>
                         <p1 id = "demo1"></p1>
                         <br>
                         <br>
@@ -96,11 +96,12 @@ form {
 
                                 
                                 questionNum++;
+                                score+=1;
                                 myFunction5();
                                 alreadGotitRight();
                                 }
                         </script>
-                        <button type="button2" onclick="myFunction2()">String weight = 89.5</button>
+                        <button type="button2" id = "b2" onclick="myFunction2();disable();">String weight = 89.5</button>
                         <p2 id = "demo2"></p2>
                         <br>
                         <br>
@@ -111,13 +112,13 @@ form {
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
 
-                        <button type="button3" onclick="myFunction3()">boolean weight = 89.5</button>
+                        <button type="button3" id = "b3" onclick="myFunction3();disable();">boolean weight = 89.5</button>
                         <p3 id = "demo3"></p3>
                         <br>
                         <br>
@@ -128,12 +129,12 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
-                        <button type="button4" onclick="myFunction4()">int weight = 89.5</button>
+                        <button type="button4" id = "b4" onclick="myFunction4();disable();">int weight = 89.5</button>
                         <p4 id = "demo4"></p4>
                         <br>
                         <br>
@@ -144,7 +145,7 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
@@ -195,6 +196,25 @@ form {
 
                             }
                         }
+                        function disable(){
+                              
+                              if (heart == 0){
+                              document.getElementById("b1").disabled = true;
+                              document.getElementById("b2").disabled = true;
+                              document.getElementById("b3").disabled = true;
+                              document.getElementById("b4").disabled = true;
+                              }
+                              var x = document.getElementById("b1").disabled;
+                              console.log(x);
+                          }
+                          function moveOn(){
+                                if( score > 0){
+                                document.getElementById("b2").disabled = true;
+                                document.getElementById("b3").disabled = true;
+                                document.getElementById("b4").disabled = true;
+
+                                }
+                            }
                     </script>
                     </form>
                 </div>

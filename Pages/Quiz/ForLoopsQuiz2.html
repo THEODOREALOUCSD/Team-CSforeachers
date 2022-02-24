@@ -77,10 +77,10 @@ form {
                              She is suprised and happy to see that all her student passed the 
                              test. She needs to enter this information into a online system. 
                              She suddently remember that 3 of her students were absent. If she
-                              was 23 student in total how can she represent this?
+                              has 23 students in total how can she represent this?
 
                         </p>
-                        <button type="button1" onclick="myFunction1()">for (student = 0; student<21; student++){
+                        <button type="button1" id = "b1" onclick="myFunction1();disable();moveOn();">for (student = 0; student<21; student++){
                             <br>
                             grade = "Pass";
                         }
@@ -103,11 +103,12 @@ form {
 
                              
                                 questionNum++;
+                                score+=1;
                                 myFunction5();
                                 alreadGotitRight();
                                 }
                         </script>
-                        <button type="button2" onclick="myFunction2()">for (student = 0; student<20; student++){
+                        <button type="button2" id = "b2" onclick="myFunction2();disable();">for (student = 0; student<20; student++){
                             <br>
                             grade = "Pass";
                         }</button>
@@ -121,13 +122,13 @@ form {
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
 
-                        <button type="button3" onclick="myFunction3()">for (student = 0; student>21; student++){
+                        <button type="button3" id = "b3" onclick="myFunction3();disable();">for (student = 0; student>21; student++){
                             <br>
                             grade = "Pass";
                         }</button>
@@ -141,12 +142,12 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
-                        <button type="button4" onclick="myFunction4()">for (student = 0; student<23; student++){
+                        <button type="button4" id = "b4" onclick="myFunction4();disable();">for (student = 0; student<23; student++){
                             <br>
                             grade = "Pass";
                         }</button>
@@ -160,7 +161,7 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
@@ -210,6 +211,25 @@ form {
   
                                   }
                               }
+                              function disable(){
+                              
+                              if (heart == 0){
+                              document.getElementById("b1").disabled = true;
+                              document.getElementById("b2").disabled = true;
+                              document.getElementById("b3").disabled = true;
+                              document.getElementById("b4").disabled = true;
+                              }
+                              var x = document.getElementById("b1").disabled;
+                              console.log(x);
+                          }
+                              function moveOn(){
+                                if( score > 0){
+                                document.getElementById("b2").disabled = true;
+                                document.getElementById("b3").disabled = true;
+                                document.getElementById("b4").disabled = true;
+
+                                }
+                            }
                           </script>
                         
                     </form>

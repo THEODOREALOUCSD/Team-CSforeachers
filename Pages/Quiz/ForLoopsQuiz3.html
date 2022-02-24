@@ -76,7 +76,7 @@ form {
                         <p id="question">Question 3: James bought a new washing machine. It allows him to enter a specific amount of minutes he needs to wash his clothes. If James put the machine to run for 15 minutes, which answer choice best represents this?
 
                         </p>
-                        <button type="button1" onclick="myFunction1()"> for( time = 15; time> 1; time--){
+                        <button type="button1" id = "b1" onclick="myFunction1();disable();"> for( time = 15; time> 1; time--){
                             <BR>
                               (print( time + "minutes left")) }
 
@@ -94,13 +94,13 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                
                                 }
                         </script>
-                        <button type="button2" onclick="myFunction2()">for( time = 15; time >= 0; time--){
+                        <button type="button2" id = "b2" onclick="myFunction2();disable();moveOn();">for( time = 15; time >= 0; time--){
                             <BR>
                               (print( time + "minutes left")) }
                             
@@ -116,12 +116,13 @@ form {
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
                                 questionNum++;
+                                score+=1;
                                 myFunction5();
                                 alreadGotitRight();
                                 }
                         </script>
 
-                        <button type="button3" onclick="myFunction3()">
+                        <button type="button3" id = "b3" onclick="myFunction3();disable();">
                             
                             for( time = 0; time> 1; time--){
                                 <BR>
@@ -136,12 +137,12 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
-                        <button type="button4" onclick="myFunction4()"> for( time = 10; time>= 0; time--){
+                        <button type="button4" id = "b4" onclick="myFunction4();disable();"> for( time = 10; time>= 0; time--){
                             <BR>
                               (print( time + "minutes left")) }</button>
                         <p4 id = "demo4"></p4>
@@ -154,7 +155,7 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
@@ -204,6 +205,25 @@ form {
   
                                   }
                               }
+                              function disable(){
+                              
+                              if (heart == 0){
+                              document.getElementById("b1").disabled = true;
+                              document.getElementById("b2").disabled = true;
+                              document.getElementById("b3").disabled = true;
+                              document.getElementById("b4").disabled = true;
+                              }
+                              var x = document.getElementById("b1").disabled;
+                              console.log(x);
+                          }
+                          function moveOn(){
+                                if( score > 0){
+                                document.getElementById("b1").disabled = true;
+                                document.getElementById("b3").disabled = true;
+                                document.getElementById("b4").disabled = true;
+
+                                }
+                            }
                           </script>
                         
                     </form>
