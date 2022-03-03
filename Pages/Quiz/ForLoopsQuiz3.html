@@ -14,7 +14,7 @@ h1 {
 }
 
 p{
-    font-size: 2vw;
+    font-size: 20px;
      text-align: left;
 }
 body{
@@ -67,7 +67,7 @@ form {
         <div class="container">
             <div class="row">
                 <div class="col-9"> <img src="Question12.png" class="img-thumbnail w-100" alt="Game Map"> </div>
-                <div class="col-2"> <img src="../../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
+                <div class="col-2"> <img src="3heart.png" id = "heart" class="img-fluid" alt="Hearts"> </div>
             </div>
             <div class="row">
                 <div class="col justify-content-left">
@@ -76,7 +76,10 @@ form {
                         <p id="question">Question 3: James bought a new washing machine. It allows him to enter a specific amount of minutes he needs to wash his clothes. If James put the machine to run for 15 minutes, which answer choice best represents this?
 
                         </p>
-                        <button type="button1" id = "b1" onclick="myFunction1();disable();"> for( time = 15; time> 1; time--){
+                        <script>
+                            let heart = 6;
+                        </script>
+                        <button type="button1" id = "b1" onclick="myFunction1();disable();updateHeart();"> for( time = 15; time> 1; time--){
                             <BR>
                               (print( time + "minutes left")) }
 
@@ -85,8 +88,7 @@ form {
                         <br>
                         <br>
                         <script>
-                            let heart = 6;
-                            let questionNum = 0;
+                            
                             let score = 0;
 
                             function myFunction1()  {
@@ -100,7 +102,7 @@ form {
                                
                                 }
                         </script>
-                        <button type="button2" id = "b2" onclick="myFunction2();disable();moveOn();">for( time = 15; time >= 0; time--){
+                        <button type="button2" id = "b2" onclick="myFunction2();disable();moveOn();updateHeart();">for( time = 15; time >= 0; time--){
                             <BR>
                               (print( time + "minutes left")) }
                             
@@ -115,14 +117,13 @@ form {
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                questionNum++;
                                 score+=1;
                                 myFunction5();
                                 alreadGotitRight();
                                 }
                         </script>
 
-                        <button type="button3" id = "b3" onclick="myFunction3();disable();">
+                        <button type="button3" id = "b3" onclick="myFunction3();disable();updateHeart();">
                             
                             for( time = 0; time> 1; time--){
                                 <BR>
@@ -142,7 +143,7 @@ form {
                                 r();
                                 }
                         </script>
-                        <button type="button4" id = "b4" onclick="myFunction4();disable();"> for( time = 10; time>= 0; time--){
+                        <button type="button4" id = "b4" onclick="myFunction4();disable();updateHeart();"> for( time = 10; time>= 0; time--){
                             <BR>
                               (print( time + "minutes left")) }</button>
                         <p4 id = "demo4"></p4>
@@ -167,9 +168,7 @@ form {
                                 if(document.getElementById("demo2").innerHTML == "Correct!"){
                                 //    window.location.href = "http://127.0.0.1:5500/Pages/Pages/DatatypeQuiz2.html";
                                 document.getElementById("next").style.visibility = "visible";
-                                // document.getElementById("demo2").innerHTML = "";
-                                // document.getElementById("demo3").innerHTML = "";
-                                // document.getElementById("demo4").innerHTML = "";
+                              
                                 }
                                 
                                
@@ -223,6 +222,27 @@ form {
                                 document.getElementById("b4").disabled = true;
 
                                 }
+                            }
+                            function updateHeart(){
+                                if (heart == 6){
+                                    var image = document.getElementById('heart');
+                                    image.src = "3heart.png";
+                                }
+                                if (heart == 4){
+                                    var image = document.getElementById('heart');
+                                    image.src = "2heart.png";
+                                }
+                                if (heart == 2){
+                                    document.getElementById('heart').src="1heart.png";
+
+
+                                 }
+
+                                 if (heart == 0 ){
+                                    document.getElementById("heart").style.visibility = "hidden";
+
+                                 }
+
                             }
                           </script>
                         

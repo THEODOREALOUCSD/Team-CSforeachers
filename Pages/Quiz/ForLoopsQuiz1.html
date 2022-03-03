@@ -14,7 +14,7 @@ h1 {
 }
 
 p{
-    font-size: 2vw;
+    font-size: 20px;
      text-align: left;
 }
 body{
@@ -67,16 +67,18 @@ form {
         <div class="container">
             <div class="row">
                 <div class="col-9"> <img src="Question10.png" class="img-thumbnail w-100" alt="Game Map"> </div>
-                <div class="col-2"> <img src="../../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
+                <div class="col-2"> <img src="3heart.png" id = "heart" class="img-fluid" alt="Hearts"> </div>
             </div>
             <div class="row">
                 <div class="col justify-content-left">
                     <form onsubmit="return false">
-                        
                         <p id="question">Question 1: Samdrea is a teacher at an elementary school. Right now, its recess time. Student are allowed to play games and rest during this free time. However, when 20 minutes are up, student must be seated in the classroom before the next bell rings. How can you represent this scenario?
                              
                         </p>
-                        <button type="button1" id = "b1"onclick="myFunction1();disable();"> for( time = 0; time < 19; ; time++){
+                        <script>
+                            let heart = 6;
+                        </script>
+                        <button type="button1" id = "b1"onclick="myFunction1();disable();updateHeart();"> for( time = 0; time < 19; ; time++){
                             <Br>
                                 (print"It's time to play")}
                         </button>
@@ -84,8 +86,7 @@ form {
                         <br>
                         <br>
                         <script>
-                            let heart = 6;
-                            let questionNum = 0;
+                          
                             let score = 0;
 
                             function myFunction1() {
@@ -93,14 +94,12 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                
-
-                                heart+= -2;
+                                 heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
-                        <button type="button2" id = "b2"onclick="myFunction2();disable();">  for( time = 0; time >= 19; ; time++){
+                        <button type="button2" id = "b2"onclick="myFunction2();disable();updateHeart();">  for( time = 0; time >= 19; ; time++){
                             <Br>
                                 (print"It's time to play")}</button>
                         <p2 id = "demo2"></p2>
@@ -119,7 +118,7 @@ form {
                                 }
                         </script>
 
-                        <button type="button3" id = "b3"onclick="myFunction3();disable();">  for( time = 0; time = 20; time++){
+                        <button type="button3" id = "b3"onclick="myFunction3();disable();updateHeart();">  for( time = 0; time = 20; time++){
                             <Br>
                                 (print"It's time to play")}</button>
                         <p3 id = "demo3"></p3>
@@ -138,7 +137,7 @@ form {
                                 r();
                                 }
                         </script>
-                        <button type="button4" id ="b4" onclick="myFunction4();disable();moveOn();">  for( time = 0; time <= 20;  time++){
+                        <button type="button4" id ="b4" onclick="myFunction4();disable();moveOn();updateHeart();">  for( time = 0; time <= 20;  time++){
                             <Br>
                                 (print"It's time to play")}</button>
                         <p4 id = "demo4"></p4>
@@ -151,7 +150,6 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
-                                questionNum++;
                                 score+=1;
                                 myFunction5();
                                 alreadGotitRight();
@@ -164,9 +162,6 @@ form {
                                 if(document.getElementById("demo4").innerHTML == "Correct!"){
                                 //    window.location.href = "http://127.0.0.1:5500/Pages/Pages/DatatypeQuiz2.html";
                                 document.getElementById("next").style.visibility = "visible";
-                                // document.getElementById("demo2").innerHTML = "";
-                                // document.getElementById("demo3").innerHTML = "";
-                                // document.getElementById("demo4").innerHTML = "";
                                 }
                                 
                                
@@ -220,6 +215,28 @@ form {
                                 document.getElementById("b2").disabled = true;
 
                                 }
+                            }
+                            function updateHeart (){
+                                  var image = document.getElementById('heart');
+                                 if (heart == 6){
+                                    document.getElementById('heart').src="3heart.png";
+                                 }
+                                 if (heart == 4){
+                                    image.src = "2heart.png"
+                                    document.getElementById('heart').src="2heart.png";
+
+                                 }
+                                 if (heart == 2){
+                                    document.getElementById('heart').src="1heart.png";
+
+
+                                 }
+
+                                 if (heart == 0 ){
+                                    document.getElementById("heart").style.visibility = "hidden";
+
+                                 }
+                                
                             }
                           </script>
                         

@@ -14,7 +14,7 @@ h1 {
 }
 
 p{
-    font-size: 2vw;
+    font-size: 20px;
      text-align: left;
 }
 body{
@@ -67,16 +67,18 @@ form {
         <div class="container">
             <div class="row">
                 <div class="col-9"> <img src="Question9.png" class="img-thumbnail w-100" alt="Game Map"> </div>
-                <div class="col-2"> <img src="../../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
+                <div class="col-2"> <img src="3heart.png" id = "heart" class="img-fluid" alt="Hearts"> </div>
             </div>
             <div class="row">
                 <div class="col justify-content-left">
                     <form onsubmit="return false">
                         
                         <p id="question">Question 3: Ronald is planning an exciting vacation with his family. He explains to his family that if we take a vacation in the summer then we should go to Hawaii. But if we go on vacation in the fall, then we should go to Texas. Or if we go on vacation in the winter, then we should go to New York. Which condition satisfies this case?
-                             
                         </p>
-                        <button type="button1" id = "b1" onclick="myFunction1();disable();"> if(vacation == summer){ print("We are going to Hawaii")}
+                        <script>
+                            let heart = 6;
+                        </script>
+                        <button type="button1" id = "b1" onclick="myFunction1();disable();updateHeart();"> if(vacation == summer){ print("We are going to Hawaii")}
                         <br>
                         else if(vacation == fall){ print("We are going to New York")}
                         <Br>
@@ -86,8 +88,7 @@ form {
                         <br>
                         <br>
                         <script>
-                            let heart = 6;
-                            let questionNum = 0;
+                            
                             let score = 0;
 
                             function myFunction1() {
@@ -95,14 +96,12 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                
-
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
-                        <button type="button2" id = "b2" onclick="myFunction2();disable();"> if(vacation != summer){ print("We are going to Hawaii")}
+                        <button type="button2" id = "b2" onclick="myFunction2();disable();updateHeart();"> if(vacation != summer){ print("We are going to Hawaii")}
                             <br>
                             else if(vacation == fall){ print("We are going to New York")}
                             <Br>
@@ -112,18 +111,18 @@ form {
                         <br>
                         <script>
                             function myFunction2() {
-                                console.log(heart);
+                                
                                 document.getElementById("demo2").innerHTML = "wrong, try again!";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
 
-                        <button type="button3" id = "b3" onclick="myFunction3();disable();"> if(vacation == winter){ print("We are going to Hawaii")}
+                        <button type="button3" id = "b3" onclick="myFunction3();disable();updateHeart();"> if(vacation == winter){ print("We are going to Hawaii")}
                             <br>
                             else if(vacation == fall){ print("We are going to New York")}
                             <Br>
@@ -133,18 +132,18 @@ form {
                         <br>
                         <script>
                             function myFunction3() {
-                                console.log(heart);
+                               
                                 document.getElementById("demo3").innerHTML = "wrong, try again!";
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
                                
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
-                        <button type="button4" id = "b4" onclick="myFunction4();disable();moveOn();"> if(vacation == summer){ print("We are going to Hawaii")}
+                        <button type="button4" id = "b4" onclick="myFunction4();disable();moveOn();updateHeart();"> if(vacation == summer){ print("We are going to Hawaii")}
                             <br>
                             else if(vacation == fall){ print("We are going to Texas")}
                             <Br>
@@ -154,12 +153,11 @@ form {
                         <br>
                         <script>
                             function myFunction4() {
-                                console.log(heart);
+                                
                                 document.getElementById("demo4").innerHTML = "Correct!";
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
-                                questionNum++;
                                 score+=1;
                                 myFunction5();
                                 alreadGotitRight();
@@ -172,9 +170,7 @@ form {
                                 if(document.getElementById("demo4").innerHTML == "Correct!"){
                                 //    window.location.href = "http://127.0.0.1:5500/Pages/Pages/DatatypeQuiz2.html";
                                 document.getElementById("next").style.visibility = "visible";
-                                // document.getElementById("demo2").innerHTML = "";
-                                // document.getElementById("demo3").innerHTML = "";
-                                // document.getElementById("demo4").innerHTML = "";
+                                
                                 }
                                 
                                
@@ -228,6 +224,28 @@ form {
                                 document.getElementById("b3").disabled = true;
 
                                 }
+                            }
+                            function updateHeart (){
+                                  var image = document.getElementById('heart');
+                                 if (heart == 6){
+                                    document.getElementById('heart').src="3heart.png";
+                                 }
+                                 if (heart == 4){
+                                    image.src = "2heart.png"
+                                    document.getElementById('heart').src="2heart.png";
+
+                                 }
+                                 if (heart == 2){
+                                    document.getElementById('heart').src="1heart.png";
+
+
+                                 }
+
+                                 if (heart == 0 ){
+                                    document.getElementById("heart").style.visibility = "hidden";
+
+                                 }
+                                
                             }
                           </script>
                         

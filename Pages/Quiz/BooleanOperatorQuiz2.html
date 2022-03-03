@@ -67,21 +67,22 @@ form {
         <div class="container">
             <div class="row">
                 <div class="col-9"> <img src="Question6.png" class="img-thumbnail w-100" alt="Game Map"> </div>
-                <div class="col-2"> <img src="../../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
-            </div>
+                <div class="col-2"> <img src="3heart.png" id = "heart" class="img-fluid" alt="Hearts"> </div>            </div>
             <div class="row">
                 <div class="col justify-content-left">
                     <form onsubmit="return false">
                         
                         <p id="question">Question 1: TA jar has  10 marbles in it. In another jar, there are 6 marbles. Sally says its "true" if at least one of the jars had 10 marbles. Which line of code uses the correct operator to show this relationship?
                         </p>
-                        <button type="button1" id = "b1" onclick="myFunction1();disable();"> A&&B</button>
+                        <script>
+                            let heart = 6;
+                        </script>
+                        <button type="button1" id = "b1" onclick="myFunction1();disable();updateHeart();"> A&&B</button>
                         <p1 id = "demo1"></p1>
                         <br>
                         <br>
                         <script>
-                            let heart = 6;
-                            let questionNum = 0;
+                           
                             let score = 0;
 
                             function myFunction1()  {
@@ -95,7 +96,7 @@ form {
                                
                                 }
                         </script>
-                        <button type="button2" id = "b2" onclick="myFunction2();disable();moveOn();">A||B</button>
+                        <button type="button2" id = "b2" onclick="myFunction2();disable();moveOn();updateHeart();">A||B</button>
                         <p2 id = "demo2"></p2>
                         <br>
                         <br>
@@ -106,14 +107,13 @@ form {
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                questionNum++;
                                 score+=1;
                                 myFunction5();
                                 alreadGotitRight();
                                 }
                         </script>
 
-                        <button type="button3" id = "b3" onclick="myFunction3();disable();"> A == B</button>
+                        <button type="button3" id = "b3" onclick="myFunction3();disable();updateHeart();"> A == B</button>
                         <p3 id = "demo3"></p3>
                         <br>
                         <br>
@@ -129,7 +129,7 @@ form {
                                 r();
                                 }
                         </script>
-                        <button type="button4" id = "b4" onclick="myFunction4();disable();"> B >= A</button>
+                        <button type="button4" id = "b4" onclick="myFunction4();disable();updateHeart();"> B >= A</button>
                         <p4 id = "demo4"></p4>
                         <br>
                         <br>
@@ -152,9 +152,7 @@ form {
                                 if(document.getElementById("demo2").innerHTML == "Correct!"){
                                 //    window.location.href = "http://127.0.0.1:5500/Pages/Pages/DatatypeQuiz2.html";
                                 document.getElementById("next").style.visibility = "visible";
-                                // document.getElementById("demo2").innerHTML = "";
-                                // document.getElementById("demo3").innerHTML = "";
-                                // document.getElementById("demo4").innerHTML = "";
+                               
                                 }
                                 
                                
@@ -208,6 +206,28 @@ form {
                                 document.getElementById("b4").disabled = true;
 
                                 }
+                            }
+                            function updateHeart (){
+                                  var image = document.getElementById('heart');
+                                 if (heart == 6){
+                                    document.getElementById('heart').src="3heart.png";
+                                 }
+                                 if (heart == 4){
+                                    image.src = "2heart.png"
+                                    document.getElementById('heart').src="2heart.png";
+
+                                 }
+                                 if (heart == 2){
+                                    document.getElementById('heart').src="1heart.png";
+
+
+                                 }
+
+                                 if (heart == 0 ){
+                                    document.getElementById("heart").style.visibility = "hidden";
+
+                                 }
+                                
                             }
                           </script>
                         

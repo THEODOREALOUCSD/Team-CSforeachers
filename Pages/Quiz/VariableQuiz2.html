@@ -14,7 +14,7 @@ h1 {
 }
 
 p{
-    font-size: 2vw;
+    font-size: 20px;
      text-align: left;
 }
 body{
@@ -67,15 +67,17 @@ form {
         <div class="container">
             <div class="row">
                 <div class="col-9"> <img src="Question4.png" class="img-thumbnail w-100" alt="Game Map"> </div>
-                <div class="col-2"> <img src="../../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
-            </div>
+                <div class="col-2"> <img src="3heart.png" id = "heart" class="img-fluid" alt="Hearts"> </div>           
             <div class="row">
                 <div class="col justify-content-left">
                     <form onsubmit="return false">
                         
                         <p id="question">Question 2: John is trying exercise more often to stay healthy. To keep track of time he spends running he wears the smart tracker watch that captures the time he spend running. The smart watch records the time John began running and when the time was when he finished. What containers match his exercise schedule?
                         </p>
-                        <button type="button1" id = "b1" onclick="myFunction1();disable();"> int start = false;
+                        <script>
+                            let heart = 6;
+                        </script>
+                        <button type="button1" id = "b1" onclick="myFunction1();disable();updateHeart();"> int start = false;
                         <br> 
                         int finish = true;                                           
                         </button>
@@ -83,8 +85,7 @@ form {
                         <br>
                         <br>
                         <script>
-                            let heart = 6;
-                            let questionNum = 0;
+                          
                             let score = 0;
 
                             function myFunction1() {
@@ -99,7 +100,7 @@ form {
                                 r();
                                 }
                         </script>
-                        <button type="button2" id = "b2" onclick="myFunction2();disable();"> int start = 5am
+                        <button type="button2" id = "b2" onclick="myFunction2();disable();updateHeart();"> int start = 5am
                         <br>
                         int finish = 5:12am
                         </button>
@@ -119,7 +120,7 @@ form {
                                 }
                         </script>
 
-                        <button type="button3" id = "b3" onclick="myFunction3();disable();moveOn();"> String start = "5am"
+                        <button type="button3" id = "b3" onclick="myFunction3();disable();moveOn();updateHeart();"> String start = "5am"
                             <br>
                             String finished = "5:12am" </button>
                         <p3 id = "demo3"></p3>
@@ -133,13 +134,13 @@ form {
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
                                
-                                questionNum++;
+                                
                                 score+=1;
                                 myFunction5();
                                 alreadGotitRight();
                                 }
                         </script>
-                        <button type="button4" id = "b4" onclick="myFunction4();disable();"> start = double 5am;
+                        <button type="button4" id = "b4" onclick="myFunction4();disable();updateHeart();"> start = double 5am;
                             <br>
                             finish = double 5:12am
                         </button>
@@ -149,7 +150,7 @@ form {
                         <script>
                             function myFunction4() {
                                 console.log(heart);
-                                document.getElementById("demo4").innerHTML = "=wrong, try again!";
+                                document.getElementById("demo4").innerHTML = "wrong, try again!";
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
@@ -166,9 +167,7 @@ form {
                                 if(document.getElementById("demo3").innerHTML == "Correct!"){
                                 //    window.location.href = "http://127.0.0.1:5500/Pages/Pages/DatatypeQuiz2.html";
                                 document.getElementById("next").style.visibility = "visible";
-                                // document.getElementById("demo2").innerHTML = "";
-                                // document.getElementById("demo3").innerHTML = "";
-                                // document.getElementById("demo4").innerHTML = "";
+                         
                                 }
                                 
                                
@@ -222,6 +221,28 @@ form {
                                 document.getElementById("b4").disabled = true;
 
                                 }
+                            }
+                            function updateHeart (){
+                                  var image = document.getElementById('heart');
+                                 if (heart == 6){
+                                    document.getElementById('heart').src="3heart.png";
+                                 }
+                                 if (heart == 4){
+                                    image.src = "2heart.png"
+                                    document.getElementById('heart').src="2heart.png";
+
+                                 }
+                                 if (heart == 2){
+                                    document.getElementById('heart').src="1heart.png";
+
+
+                                 }
+
+                                 if (heart == 0 ){
+                                    document.getElementById("heart").style.visibility = "hidden";
+
+                                 }
+                                
                             }
                           </script>
                         

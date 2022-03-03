@@ -14,7 +14,7 @@ h1 {
 }
 
 p{
-    font-size: 2vw;
+    font-size: 20px;
      text-align: left;
 }
 body{
@@ -67,7 +67,7 @@ form {
         <div class="container">
             <div class="row">
                 <div class="col-9"> <img src="Question8.png" class="img-thumbnail w-100" alt="Game Map"> </div>
-                <div class="col-2"> <img src="../../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
+                <div class="col-2"> <img src="3heart.png" id = "heart" class="img-fluid" alt="Hearts"> </div>
             </div>
             <div class="row">
                 <div class="col justify-content-left">
@@ -76,7 +76,10 @@ form {
                         <p id="question">Question 2: Sammy wany to buy a beverage on her way to work. She says, " If the weather is above 70 degrees, then I want to buy a lemonade but If the weather is below 70 degrees then I want to but a hot cocoa" Which condition satisfies the scenario?
                              
                         </p>
-                        <button type="button1" id = "b1" onclick="myFunction1();disable();moveOn();">if(weather>70){print("I will take a lemonade)}
+                        <script>
+                            let heart = 6;
+                        </script>
+                        <button type="button1" id = "b1" onclick="myFunction1();disable();moveOn();updateHeart();">if(weather>70){print("I will take a lemonade)}
                         <br>
                         else{print("I will take a hot cocoa")}
                         </button>
@@ -84,8 +87,7 @@ form {
                         <br>
                         <br>
                         <script>
-                            let heart = 6;
-                            let questionNum = 0;
+                        
                             let score = 0;
                             document.getElementById("demo1".clicked == false);
 
@@ -94,16 +96,13 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                
-
-                             
-                                questionNum++;
+                            
                                 score+=1;
                                 myFunction5();
                                 alreadGotitRight();
                                 }
                         </script>
-                        <button type="button2" id = "b2" onclick="myFunction2();disable();">if(weather==70){print("I will take a lemonade)}
+                        <button type="button2" id = "b2" onclick="myFunction2();disable();updateHeart();">if(weather==70){print("I will take a lemonade)}
                             <br>
                             else{print("I will take a hot cocoa")}</button>
                         <p2 id = "demo2"></p2>
@@ -122,7 +121,7 @@ form {
                                 }
                         </script>
 
-                        <button type="button3" id = "b3" onclick="myFunction3();disable();"> if(weather<70){print("I will take a lemonade)}
+                        <button type="button3" id = "b3" onclick="myFunction3();disable();updateHeart();"> if(weather<70){print("I will take a lemonade)}
                             <br>
                             else{print("I will take a hot cocoa")}</button>
                         <p3 id = "demo3"></p3>
@@ -140,7 +139,7 @@ form {
                                 r();
                                 }
                         </script>
-                        <button type="button4" id = "b4"onclick="myFunction4();disable();">if(weather!=70){print("I will take a lemonade)}
+                        <button type="button4" id = "b4"onclick="myFunction4();disable();updateHeart();">if(weather!=70){print("I will take a lemonade)}
                             <br>
                             else{print("I will take a hot cocoa")}</button>
                         <p4 id = "demo4"></p4>
@@ -221,6 +220,28 @@ form {
                                 document.getElementById("b4").disabled = true;
 
                                 }
+                            }
+                            function updateHeart (){
+                                  var image = document.getElementById('heart');
+                                 if (heart == 6){
+                                    document.getElementById('heart').src="3heart.png";
+                                 }
+                                 if (heart == 4){
+                                    image.src = "2heart.png"
+                                    document.getElementById('heart').src="2heart.png";
+
+                                 }
+                                 if (heart == 2){
+                                    document.getElementById('heart').src="1heart.png";
+
+
+                                 }
+
+                                 if (heart == 0 ){
+                                    document.getElementById("heart").style.visibility = "hidden";
+
+                                 }
+                                
                             }
                           </script>
                         

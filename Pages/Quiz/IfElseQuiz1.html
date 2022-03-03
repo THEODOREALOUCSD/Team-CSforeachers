@@ -14,7 +14,7 @@ h1 {
 }
 
 p{
-    font-size: 2vw;
+    font-size: 20px;
      text-align: left;
 }
 body{
@@ -67,7 +67,7 @@ form {
         <div class="container">
             <div class="row">
                 <div class="col-9"> <img src="Question7.png" class="img-thumbnail w-100" alt="Game Map"> </div>
-                <div class="col-2"> <img src="../../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
+                <div class="col-2"> <img src="3heart.png" id = "heart" class="img-fluid" alt="Hearts"> </div>
             </div>
             <div class="row">
                 <div class="col justify-content-left">
@@ -76,6 +76,9 @@ form {
                         <p id="question">Question 1: Caleb installed a kitchen timer app that tells him how long he needs to wait for his cake to bake.
                              He sets the timer for 10 minutes. The app will tell him when the 10 minutes are over. Which condition satisfies this case?
                         </p>
+                        <script>
+                            let heart = 6;
+                        </script>
                         <button type="button1" id = "b1" onclick="myFunction1();disable();"> 
                         if(timer < 10){print("10 mins is up")}
                         
@@ -84,8 +87,7 @@ form {
                         <br>
                         <br>
                         <script>
-                            let heart = 6;
-                            let questionNum = 0;
+                       
                             let score = 0;
 
                             function myFunction1()  {
@@ -99,7 +101,7 @@ form {
                                
                                 }
                         </script>
-                        <button type="button2" id = "b2" onclick="myFunction2();disable();moveOn();"> if(timer >= 10){print("10 mins is up")}
+                        <button type="button2" id = "b2" onclick="myFunction2();disable();moveOn();updateHeart();"> if(timer >= 10){print("10 mins is up")}
                         </button>
                         <p2 id = "demo2"></p2>
                         <br>
@@ -111,14 +113,13 @@ form {
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                questionNum++;
                                 score+=1;
                                 myFunction5();
                                 alreadGotitRight();
                                 }
                         </script>
 
-                        <button type="button3" id ="b3" onclick="myFunction3();disable();">if(10 > timer){print("10 mins is up")}
+                        <button type="button3" id ="b3" onclick="myFunction3();disable();updateHeart();">if(10 > timer){print("10 mins is up")}
                         </button>
                         <p3 id = "demo3"></p3>
                         <br>
@@ -135,7 +136,7 @@ form {
                                 r();
                                 }
                         </script>
-                        <button type="button4" id="b4" onclick="myFunction4();disable();"> if(timer != 10){print("10 mins is up")}
+                        <button type="button4" id="b4" onclick="myFunction4();disable();updateHeart();"> if(timer != 10){print("10 mins is up")}
                         </button>
                         <p4 id = "demo4"></p4>
                         <br>
@@ -215,6 +216,27 @@ form {
                                 document.getElementById("b4").disabled = true;
 
                                 }
+                            }
+                            function updateHeart(){
+                                if (heart == 6){
+                                    var image = document.getElementById('heart');
+                                    image.src = "3heart.png";
+                                }
+                                if (heart == 4){
+                                    var image = document.getElementById('heart');
+                                    image.src = "2heart.png";
+                                }
+                                if (heart == 2){
+                                    document.getElementById('heart').src="1heart.png";
+
+
+                                 }
+
+                                 if (heart == 0 ){
+                                    document.getElementById("heart").style.visibility = "hidden";
+
+                                 }
+
                             }
                           </script>
                         
