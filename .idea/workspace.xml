@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83556e62-7088-44d9-92f3-295640037ff0" name="Default Changelist" comment="Moving index file out of Pages folder" />
+    <list default="true" id="83556e62-7088-44d9-92f3-295640037ff0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -50,6 +51,21 @@
       <recent name="C:\Users\14088\Documents\CSforEachers\Pages" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,6 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646103082181</updated>
       <workItem from="1646103083340" duration="20977000" />
+      <workItem from="1646272327023" duration="727000" />
     </task>
     <task id="LOCAL-00001" summary="Moving index file out of Pages folder">
       <created>1646104639064</created>
@@ -90,6 +107,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Moving index file out of Pages folder" />
@@ -112,10 +130,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="113" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1646106826365" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1646157465260">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1646272535697">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1646157465260" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1646272535697" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1646135107731">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
