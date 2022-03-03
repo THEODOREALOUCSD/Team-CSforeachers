@@ -4,6 +4,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
         <title> Game Map </title>
+        <link rel='stylesheet' href="../CSS/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
      
@@ -13,7 +14,7 @@ h1 {
 }
 
 p{
-    font-size: 2vw;
+    font-size: 20px;
      text-align: left;
 }
 body{
@@ -60,61 +61,66 @@ form {
     </head>
     <body>
         
-        <h1>Boolean Operator Quiz</h1>
+        <h1>For Loops Quiz</h1>
         
      
         <div class="container">
             <div class="row">
-
-                <div class="col-9"> <img src="Question6.png" class="img-thumbnail w-100" alt="Game Map"> </div>
-                <div class="col-2"> <img src="3heart.png" id = "heart" class="img-fluid" alt="Hearts"> </div>            </div>
-
+                <div class="col-9"> <img src="Question10.png" class="img-thumbnail w-100" alt="Game Map"> </div>
+                <div class="col-2"> <img src="3heart.png" id = "heart" class="img-fluid" alt="Hearts"> </div>
+            </div>
             <div class="row">
                 <div class="col justify-content-left">
                     <form onsubmit="return false">
-                        
-                        <p id="question">Question 1: TA jar has  10 marbles in it. In another jar, there are 6 marbles. Sally says its "true" if at least one of the jars had 10 marbles. Which line of code uses the correct operator to show this relationship?
+                        <p id="question">Question 1: Samdrea is a teacher at an elementary school. Right now, its recess time. Student are allowed to play games and rest during this free time. However, when 20 minutes are up, student must be seated in the classroom before the next bell rings. How can you represent this scenario?
+                             
                         </p>
                         <script>
                             let heart = 6;
                         </script>
-                        <button type="button1" id = "b1" onclick="myFunction1();disable();updateHeart();"> A&&B</button>
+                        <button type="button1" id = "b1"onclick="myFunction1();disable();updateHeart();"> for( time = 0; time < 19; ; time++){
+                            <Br>
+                                (print"It's time to play")}
+                        </button>
                         <p1 id = "demo1"></p1>
                         <br>
                         <br>
                         <script>
-                           
+                          
                             let score = 0;
 
-                            function myFunction1()  {
+                            function myFunction1() {
                                 document.getElementById("demo1").innerHTML = "wrong, try again!";
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -2;
+                                 heart+= -2;
                                 checkifLost();
                                 r();
-                               
                                 }
                         </script>
-                        <button type="button2" id = "b2" onclick="myFunction2();disable();moveOn();updateHeart();">A||B</button>
+                        <button type="button2" id = "b2"onclick="myFunction2();disable();updateHeart();">  for( time = 0; time >= 19; ; time++){
+                            <Br>
+                                (print"It's time to play")}</button>
                         <p2 id = "demo2"></p2>
                         <br>
                         <br>
                         <script>
                             function myFunction2() {
                                 console.log(heart);
-                                document.getElementById("demo2").innerHTML = "Correct!";
+                                document.getElementById("demo2").innerHTML = "wrong, try again!";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                score+=1;
-                                myFunction5();
-                                alreadGotitRight();
+                                heart+= -2;
+                                checkifLost();
+                                r();
                                 }
                         </script>
 
-                        <button type="button3" id = "b3" onclick="myFunction3();disable();updateHeart();"> A == B</button>
+                        <button type="button3" id = "b3"onclick="myFunction3();disable();updateHeart();">  for( time = 0; time = 20; time++){
+                            <Br>
+                                (print"It's time to play")}</button>
                         <p3 id = "demo3"></p3>
                         <br>
                         <br>
@@ -125,46 +131,48 @@ form {
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
+                               
                                 heart+= -2;
                                 checkifLost();
                                 r();
                                 }
                         </script>
-                        <button type="button4" id = "b4" onclick="myFunction4();disable();updateHeart();"> B >= A</button>
+                        <button type="button4" id ="b4" onclick="myFunction4();disable();moveOn();updateHeart();">  for( time = 0; time <= 20;  time++){
+                            <Br>
+                                (print"It's time to play")}</button>
                         <p4 id = "demo4"></p4>
                         <br>
                         <br>
                         <script>
                             function myFunction4() {
                                 console.log(heart);
-                                document.getElementById("demo4").innerHTML = "wrong, try again!";
+                                document.getElementById("demo4").innerHTML = "Correct!";
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
-                                heart+= -2;
-                                checkifLost();
-                                r();
+                                score+=1;
+                                myFunction5();
+                                alreadGotitRight();
                                 }
                         </script>
                         <script>
                             
                             function myFunction5(){
                                 console.log("Hi");
-                                if(document.getElementById("demo2").innerHTML == "Correct!"){
+                                if(document.getElementById("demo4").innerHTML == "Correct!"){
                                 //    window.location.href = "http://127.0.0.1:5500/Pages/Pages/DatatypeQuiz2.html";
                                 document.getElementById("next").style.visibility = "visible";
-                               
                                 }
                                 
                                
                             }
                             function alreadGotitRight(){
-                                if(document.getElementById("demo2").innerHTML == "Correct!"){
+                                if(document.getElementById("demo4").innerHTML == "Correct!"){
                                 
                                
+                                document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
-                                document.getElementById("demo4").innerHTML = "";
                                 }
 
                             }
@@ -178,7 +186,7 @@ form {
                             }
 
                         </script>
-                          </script>
+                       
                           <p10 id = "demo10"></p10>
   
                           <script>
@@ -204,7 +212,7 @@ form {
                                 if( score > 0){
                                 document.getElementById("b1").disabled = true;
                                 document.getElementById("b3").disabled = true;
-                                document.getElementById("b4").disabled = true;
+                                document.getElementById("b2").disabled = true;
 
                                 }
                             }
@@ -240,7 +248,7 @@ form {
             <!-- <div class="row justify-content-end"> <button type="button" class="btn btn-success"><a href="Pages/Learn.html"></a> Next Activity </button> </div> -->
             <button class="button" id = "back"><a href="Learn.html">Back to Learn</a></button>
             
-            <button class="button1" id = "next"><a href = "Learn.html">Next Activity</a></button>
+            <button class="button1" id = "next"><a href = "ForLoopsQuiz2.html">Next Activity</a></button>
         </div>
    
     </body>

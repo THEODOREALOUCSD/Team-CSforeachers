@@ -14,7 +14,7 @@ h1 {
 }
 
 p{
-    font-size: 2vw;
+    font-size: 20px;
      text-align: left;
 }
 body{
@@ -30,6 +30,7 @@ img{
     float: left;
   
 }
+
 
 .button{
     background-color:rgb(202, 147, 224) ;
@@ -61,88 +62,98 @@ form {
     </head>
     <body>
         
-        <h1>DatatypeQuiz</h1>
+        <h1>Datatype Quiz</h1>
         
      
         <div class="container">
             <div class="row">
-                <div class="col-9"> <img src="Board%20Game.png" class="img-fluid w-100" alt="Game Map"></div>
-                <div class="col-2"> <img src="../../img/heart.jpg" class="img-fluid" alt="Hearts"> </div>
+
+                <div class="col-9"> <img src="Question0.png" class="img-thumbnail w-100" alt="Game Map"> </div>
+            
+                <div class="col-2"> <img src="3heart.png" id = "heart" class="img-fluid" alt="Hearts"> </div>
+
             </div>
             <div class="row">
                 <div class="col justify-content-left">
                     <form onsubmit="return false">
-                        
-                        <p id="question">Question 1: *insert character name here* went to visit the doctor’s office today. The nurse asked *insert name* to step on the scale to measure weight. The scale read 89.5 pounds. The nurse has been asked to store this data on a computer to keep track of the weight over the years. If we want to store 89.5 into a data type, which of the following would be the correct way for the nurse to do this?
+              
+                        <p id="question">Question 1: Candance went to visit the doctor’s office today. The nurse asked Candance to step on the scale to measure weight. The scale read 89.5 pounds. The nurse has been asked to store this data on a computer to keep track of the weight over the years. If we want to store 89.5 into a data type, which of the following would be the correct way for the nurse to do this?
+
                         </p>
-                        <button type="button1" onclick="myFunction1()">double weight = 89.5</button>
+                        <script>
+                            let heart = 6;
+                        </script>
+                        <button type="button1" id = "b1" onclick="myFunction1();disable();moveOn();updateHeart();">double weight = 89.5</button>
                         <p1 id = "demo1"></p1>
                         <br>
                         <br>
                         <script>
-                            let heart = 6;
-                            let questionNum = 0;
+                          
                             let score = 0;
-                            document.getElementById("demo1".clicked == false);
+                            // document.getElementById("demo1".clicked == false);
 
                             function myFunction1() {
+                                console.log(heart);
+
                                 document.getElementById("demo1").innerHTML = "Correct!";
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                
-
-                                
-                                questionNum++;
+                                score+=1;
                                 myFunction5();
                                 alreadGotitRight();
                                 }
                         </script>
-                        <button type="button2" onclick="myFunction2()">String weight = 89.5</button>
+                        <button type="button2" id = "b2" onclick="myFunction2();disable();updateHeart();">String weight = 89.5</button>
                         <p2 id = "demo2"></p2>
                         <br>
                         <br>
                         <script>
                             function myFunction2() {
-                                console.log(heart);
+                                
                                 document.getElementById("demo2").innerHTML = "wrong, try again!";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
+                                console.log(heart);
                                 checkifLost();
+                                r();
                                 }
                         </script>
 
-                        <button type="button3" onclick="myFunction3()">boolean weight = 89.5
-</button>
+                        <button type="button3" id = "b3" onclick="myFunction3();disable();updateHeart();">boolean weight = 89.5</button>
                         <p3 id = "demo3"></p3>
                         <br>
                         <br>
                         <script>
                             function myFunction3() {
-                                console.log(heart);
+                               
                                 document.getElementById("demo3").innerHTML = "wrong, try again!";
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
                                 document.getElementById("demo4").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
                                 checkifLost();
+                                r();
+                                console.log(heart);
                                 }
                         </script>
-                        <button type="button4" onclick="myFunction4()">int weight = 89.5</button>
+                        <button type="button4" id = "b4" onclick="myFunction4();disable();updateHeart();">int weight = 89.5</button>
                         <p4 id = "demo4"></p4>
                         <br>
                         <br>
                         <script>
                             function myFunction4() {
-                                console.log(heart);
+                                
                                 document.getElementById("demo4").innerHTML = "wrong, try again!";
                                 document.getElementById("demo2").innerHTML = "";
                                 document.getElementById("demo3").innerHTML = "";
                                 document.getElementById("demo1").innerHTML = "";
-                                heart+= -1;
+                                heart+= -2;
+                                console.log(heart);
                                 checkifLost();
+                                r();
                                 }
                         </script>
                         <script>
@@ -152,9 +163,7 @@ form {
                                 if(document.getElementById("demo1").innerHTML == "Correct!"){
                                 //    window.location.href = "http://127.0.0.1:5500/Pages/Pages/DatatypeQuiz2.html";
                                 document.getElementById("next").style.visibility = "visible";
-                                // document.getElementById("demo2").innerHTML = "";
-                                // document.getElementById("demo3").innerHTML = "";
-                                // document.getElementById("demo4").innerHTML = "";
+                                
                                 }
                                 
                                
@@ -177,10 +186,83 @@ form {
                                     document.getElementById("next").style.visibility = "hidden";
                                 }
                             }
+                            function updateHeart (){
+                                  var image = document.getElementById('heart');
+                                 if (heart == 6){
+                                    document.getElementById('heart').src="3heart.png";
+                                 }
+                                 if (heart == 4){
+                                    image.src = "2heart.png"
+                                    document.getElementById('heart').src="2heart.png";
+
+                                 }
+                                 if (heart == 2){
+                                    document.getElementById('heart').src="1heart.png";
+
+
+                                 }
+
+                                 if (heart == 0 ){
+                                    document.getElementById("heart").style.visibility = "hidden";
+
+                                 }
+                                
+                            }
 
                         </script>
                         
-                        
+                    </script>
+                    <p10 id = "demo10"></p10>
+
+                    <script>
+                        function r(){
+                            if(heart == 0){
+                            document.getElementById("demo10").style.visibility = "visible";
+                            document.getElementById("demo10").innerHTML = "You died, go back and learn to try again";
+
+                            }
+                        }
+                        function disable(){
+                              
+                              if (heart == 0){
+                              document.getElementById("b1").disabled = true;
+                              document.getElementById("b2").disabled = true;
+                              document.getElementById("b3").disabled = true;
+                              document.getElementById("b4").disabled = true;
+                              }
+                              var x = document.getElementById("b1").disabled;
+                              console.log(x);
+                          }
+                          function moveOn(){
+                                if( score > 0){
+                                document.getElementById("b2").disabled = true;
+                                document.getElementById("b3").disabled = true;
+                                document.getElementById("b4").disabled = true;
+
+                                }
+                            }
+                            function updateHeart(){
+                                if (heart == 6){
+                                    var image = document.getElementById('heart');
+                                    image.src = "3heart.png";
+                                }
+                                if (heart == 4){
+                                    var image = document.getElementById('heart');
+                                    image.src = "2heart.png";
+                                }
+                                if (heart == 2){
+                                    document.getElementById('heart').src="1heart.png";
+
+
+                                 }
+
+                                 if (heart == 0 ){
+                                    document.getElementById("heart").style.visibility = "hidden";
+
+                                 }
+
+                            }
+                    </script>
                     </form>
                 </div>
             </div>
