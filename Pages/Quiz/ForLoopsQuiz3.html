@@ -4,6 +4,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
         <title> Game Map </title>
+        <link rel='stylesheet' href="../CSS/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
      
@@ -13,7 +14,7 @@ h1 {
 }
 
 p{
-    font-size: 2vw;
+    font-size: 20px;
      text-align: left;
 }
 body{
@@ -60,30 +61,34 @@ form {
     </head>
     <body>
         
-        <h1>Boolean Operator Quiz</h1>
+        <h1>For Loops Quiz</h1>
         
      
         <div class="container">
             <div class="row">
-
-                <div class="col-9"> <img src="Question6.png" class="img-thumbnail w-100" alt="Game Map"> </div>
-                <div class="col-2"> <img src="3heart.png" id = "heart" class="img-fluid" alt="Hearts"> </div>            </div>
-
+                <div class="col-9"> <img src="Question12.png" class="img-thumbnail w-100" alt="Game Map"> </div>
+                <div class="col-2"> <img src="3heart.png" id = "heart" class="img-fluid" alt="Hearts"> </div>
+            </div>
             <div class="row">
                 <div class="col justify-content-left">
                     <form onsubmit="return false">
                         
-                        <p id="question">Question 1: TA jar has  10 marbles in it. In another jar, there are 6 marbles. Sally says its "true" if at least one of the jars had 10 marbles. Which line of code uses the correct operator to show this relationship?
+                        <p id="question">Question 3: James bought a new washing machine. It allows him to enter a specific amount of minutes he needs to wash his clothes. If James put the machine to run for 15 minutes, which answer choice best represents this?
+
                         </p>
                         <script>
                             let heart = 6;
                         </script>
-                        <button type="button1" id = "b1" onclick="myFunction1();disable();updateHeart();"> A&&B</button>
+                        <button type="button1" id = "b1" onclick="myFunction1();disable();updateHeart();"> for( time = 15; time> 1; time--){
+                            <BR>
+                              (print( time + "minutes left")) }
+
+                        </button>
                         <p1 id = "demo1"></p1>
                         <br>
                         <br>
                         <script>
-                           
+                            
                             let score = 0;
 
                             function myFunction1()  {
@@ -97,7 +102,11 @@ form {
                                
                                 }
                         </script>
-                        <button type="button2" id = "b2" onclick="myFunction2();disable();moveOn();updateHeart();">A||B</button>
+                        <button type="button2" id = "b2" onclick="myFunction2();disable();moveOn();updateHeart();">for( time = 15; time >= 0; time--){
+                            <BR>
+                              (print( time + "minutes left")) }
+                            
+                           </button>
                         <p2 id = "demo2"></p2>
                         <br>
                         <br>
@@ -114,7 +123,11 @@ form {
                                 }
                         </script>
 
-                        <button type="button3" id = "b3" onclick="myFunction3();disable();updateHeart();"> A == B</button>
+                        <button type="button3" id = "b3" onclick="myFunction3();disable();updateHeart();">
+                            
+                            for( time = 0; time> 1; time--){
+                                <BR>
+                                  (print( time + "minutes left")) }</button>
                         <p3 id = "demo3"></p3>
                         <br>
                         <br>
@@ -130,7 +143,9 @@ form {
                                 r();
                                 }
                         </script>
-                        <button type="button4" id = "b4" onclick="myFunction4();disable();updateHeart();"> B >= A</button>
+                        <button type="button4" id = "b4" onclick="myFunction4();disable();updateHeart();"> for( time = 10; time>= 0; time--){
+                            <BR>
+                              (print( time + "minutes left")) }</button>
                         <p4 id = "demo4"></p4>
                         <br>
                         <br>
@@ -153,7 +168,7 @@ form {
                                 if(document.getElementById("demo2").innerHTML == "Correct!"){
                                 //    window.location.href = "http://127.0.0.1:5500/Pages/Pages/DatatypeQuiz2.html";
                                 document.getElementById("next").style.visibility = "visible";
-                               
+                              
                                 }
                                 
                                
@@ -178,7 +193,7 @@ form {
                             }
 
                         </script>
-                          </script>
+                        
                           <p10 id = "demo10"></p10>
   
                           <script>
@@ -208,17 +223,16 @@ form {
 
                                 }
                             }
-                            function updateHeart (){
-                                  var image = document.getElementById('heart');
-                                 if (heart == 6){
-                                    document.getElementById('heart').src="3heart.png";
-                                 }
-                                 if (heart == 4){
-                                    image.src = "2heart.png"
-                                    document.getElementById('heart').src="2heart.png";
-
-                                 }
-                                 if (heart == 2){
+                            function updateHeart(){
+                                if (heart == 6){
+                                    var image = document.getElementById('heart');
+                                    image.src = "3heart.png";
+                                }
+                                if (heart == 4){
+                                    var image = document.getElementById('heart');
+                                    image.src = "2heart.png";
+                                }
+                                if (heart == 2){
                                     document.getElementById('heart').src="1heart.png";
 
 
@@ -228,15 +242,13 @@ form {
                                     document.getElementById("heart").style.visibility = "hidden";
 
                                  }
-                                
+
                             }
                           </script>
                         
                     </form>
                 </div>
-            </div>
-            
-                            
+            </div>                  
             <!-- <div class="row justify-content-end"> <button type="button" class="btn btn-success"><a href="Pages/Learn.html"></a> Next Activity </button> </div> -->
             <button class="button" id = "back"><a href="Learn.html">Back to Learn</a></button>
             
