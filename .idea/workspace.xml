@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83556e62-7088-44d9-92f3-295640037ff0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pages/Quiz/Badge#1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Quiz/Account.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Quiz/Account.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Quiz/Progress.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Quiz/Progress.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +44,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Pages/Quiz" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -50,7 +55,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\14088\Documents\CSforEachers\Pages\Quiz" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\14088\Documents\CSforEachers\Pages\Quiz" />
       <recent name="C:\Users\14088\Documents\CSforEachers\Pages" />
     </key>
   </component>
@@ -66,6 +75,7 @@
       <workItem from="1646272327023" duration="794000" />
       <workItem from="1646276713379" duration="238000" />
       <workItem from="1646349994410" duration="1532000" />
+      <workItem from="1646380481888" duration="8219000" />
     </task>
     <task id="LOCAL-00001" summary="Moving index file out of Pages folder">
       <created>1646104639064</created>
@@ -108,10 +118,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="480" y="153" key="#Web_Browsers/0.0.1366.728@0.0.1366.728" timestamp="1646106587434" />
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1646107458413">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1646387442351">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1646107458413" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1646387442351" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1646157646914">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -120,6 +130,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="113" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1646106826365" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1646382183179">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1646382183179" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1646272535697">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -128,9 +142,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1646135107731" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1646107545015">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1646388193834">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1646107545015" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1646388193834" />
   </component>
 </project>

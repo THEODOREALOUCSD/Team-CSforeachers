@@ -1,43 +1,114 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
     <style>
-     * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 1vw;
-}
-     body{
-        background-image: linear-gradient(to left,rgb(163, 169, 240),rgb(0, 153, 255), rgb(219, 111, 178),rgb(177, 79, 216) );
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
 
-     } 
-     h1 {
-    font-size: 3vw;
+        body {
+            background-image: linear-gradient(to left, rgb(163, 169, 240), rgb(0, 153, 255), rgb(219, 111, 178), rgb(177, 79, 216));
+            padding-left: 5em;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-left: -5em;
+            padding-left: 3.75em;
+        }
+
+        .navigation {
+            overflow: hidden;
+        }
+
+
     
-}
-    .navigation {
-        overflow: hidden;
-        background-image: linear-gradient(to left,rgb(163, 169, 240),rgb(0, 153, 255), rgb(219, 111, 178),rgb(177, 79, 216) );
-    }
-    .navigation a{
-        float: right;
-        display: block;
-        color: #000000;
-        text-align: center;
-        padding: 1px 10px;
-        font-size: 2vw;
-    }
-    .table,th, td{
-        border:5px solid rgb(253, 253, 253);
-        width: 150px;
-        height: 150px;
-        text-align: center;
-    }
 
-    td{
-        color: grey;
-    }
-            
-    </style>  
+        hr{
+            margin-left: -6em;
+        }
+        .navigation a {
+            float: right;
+            display: block;
+            color: #000000;
+            text-align: center;
+            padding: 1px 10px;
+            font-size: 2vw;
+            margin-top: 1em;
+        }
+
+        td {
+            border: 5px solid rgb(0, 0, 0);
+            display: inline-block;
+            width: fit-content;
+            height: fit-content;
+            text-align: center;
+
+        }
+
+        .imgContainer {
+            width: 7rem;
+            height: 7rem;
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: auto;
+            vertical-align: middle;
+        .
+        }
+
+        .badge {
+            width: 7rem;
+            height: auto;
+        }
+
+        td {
+            background-color: black;
+            color: grey;
+        }
+
+        h2 {
+            color: #242424;
+            font-family: 'Hubballi', sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            background-color: #9879CD;
+            margin-left: -5em;
+            padding-top: 1.5em;
+            padding-left: 3.5em;
+            padding-bottom: 0.5em;
+            width: 7em;
+            margin-bottom: 2em;
+            margin-top: 1em;
+        }
+
+        h5 {
+            margin:0;
+        }
+
+        .tooltip-wrap {
+            position: relative;
+        }
+
+        .tooltip-wrap .tooltip-content {
+            display: none;
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            right: 5%;
+            background-color: #fff;
+            padding: .5em;
+        }
+
+        .tooltip-wrap:hover .tooltip-content {
+            display: block;
+            border-radius: 1.5em;
+        }
+    </style>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
     <title> Early Start First Project </title>
@@ -48,43 +119,115 @@
         <a href="Learn.html">Learn</a>
         <a href="../index.html">Home</a>
     </div>
-    
+
 
 </head>
 
 <body>
-    <h1>Progress</h1>
+<h1>Progress</h1>
 
-    <hr>
-    <h2> Badges </h2>
-    <table style = "width:100%">
-    <table>
-        <tr>
-            <td>badge#1 </td>
-            <td>badge #2</td>
-            <td>badge#3</td>
-            <td>badge#4</td>
-            <td>badge#5</td>
-            <td>badge#6</td>
-            <td>badge#7</td>
-            <td>badge#8</td>
-        </tr>
-        <tr>
-            <td>badge#1 </td>
-            <td>badge#2</td>
-            <td>badge#3</td>
-            <td>badge#4</td>
-            <td>badge#5</td>
-            <td>badge#6</td>
-            <td>badge#7</td>
-            <td>badge#8</td>
-        </tr>
-    </table>
-    <h2>Active Days: </h2>
-    <p>Longest Streak: </p> 
+<hr>
+<h2>Badges: </h2>
+<table>
+    <tr>
+        <td class="tooltip-wrap" style="background-color: #ce86f3;
+            border-color: #242424">
+            <div class="imgContainer">
+                <img class="badge" src="Badge%231.png" alt="Badge#1">
+                <h3 style="margin-top: 0; color: white;">Badge #1</h3>
+            </div>
+            <div class="tooltip-content">
+                <p>Awarded for starting your adventure!</p>
+            </div>
+        </td>
 
-    <h2>Games Completed</h2>
-   
+
+        <td style="opacity: 60%;">
+            <div class="imgContainer">
+                <img style="visibility: hidden;" class="badge"
+                     src="Badge%231.png" alt="Badge#1">
+                <h3 style="margin-top: 0; color: white;">Badge #2</h3>
+            </div>
+        </td>
+        <td style="opacity: 60%">
+            <div class="imgContainer">
+                <img style="visibility: hidden;" class="badge"
+                     src="Badge%231.png" alt="Badge#1">
+                <h3 style="margin-top: 0; color: white;">Badge #3</h3>
+            </div>
+        </td>
+        <td style="opacity: 60%">
+            <div class="imgContainer">
+                <img style="visibility: hidden;" class="badge"
+                     src="Badge%231.png" alt="Badge#1">
+                <h3 style="margin-top: 0; color: white;">Badge #4</h3>
+            </div>
+        </td>
+        <td style="opacity: 60%">
+            <div class="imgContainer">
+                <img style="visibility: hidden;" class="badge"
+                     src="Badge%231.png" alt="Badge#1">
+                <h3 style="margin-top: 0; color: white;">Badge #5</h3>
+            </div>
+        </td>
+        <td style="opacity: 60%">
+            <div class="imgContainer">
+                <img style="visibility: hidden;" class="badge"
+                     src="Badge%231.png" alt="Badge#1">
+                <h3 style="margin-top: 0; color: white;">Badge #6</h3>
+            </div>
+        </td>
+        <td style="opacity: 60%">
+            <div class="imgContainer">
+                <img style="visibility: hidden;" class="badge"
+                     src="Badge%231.png" alt="Badge#1">
+                <h3 style="margin-top: 0; color: white;">Badge #7</h3>
+            </div>
+        </td>
+        <td style="opacity: 60%">
+            <div class="imgContainer">
+                <img style="visibility: hidden;" class="badge"
+                     src="Badge%231.png" alt="Badge#1">
+                <h3 style="margin-top: 0; color: white;">Badge #8</h3>
+            </div>
+        </td>
+        <td style="opacity: 60%">
+            <div class="imgContainer">
+                <img style="visibility: hidden;" class="badge"
+                     src="Badge%231.png" alt="Badge#1">
+                <h3 style="margin-top: 0; color: white;">Badge #9</h3>
+            </div>
+        </td>
+        <td style="opacity: 60%">
+            <div class="imgContainer">
+                <img style="visibility: hidden;" class="badge"
+                     src="Badge%231.png" alt="Badge#1">
+                <h3 style="margin-top: 0; color: white;">Badge #10</h3>
+            </div>
+        </td>
+    </tr>
+
+</table>
+<div style="height: 3em;">
+
+</div>
+<h2>Activity:</h2>
+<div style="display: flex; justify-content: space-evenly; margin-bottom: 5em;">
+    <div style="border-radius: 1em; text-align:center; font-size: 3.5em; color:
+white; font-family: Helvetica, sans-serif; background-color: #a2cae2;
+padding: 0.4em; ">
+        <h5>Longest Streak:</h5>
+    </div>
+    <div style="border-radius: 2em; text-align:center; font-size: 3.5em; color:
+white; font-family: Helvetica, sans-serif; background-color: #536fa9;
+padding: 0.4em;">
+        <h5>2 days so far, you're on a roll!</h5>
+    </div>
+</div>
+
+<hr>
+
+
 </body>
 </html>
 
