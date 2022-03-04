@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83556e62-7088-44d9-92f3-295640037ff0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Quiz/Learn.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Quiz/Learn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Quiz/Progress.html" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Quiz/Progress.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +65,7 @@
       <workItem from="1646103083340" duration="20977000" />
       <workItem from="1646272327023" duration="794000" />
       <workItem from="1646276713379" duration="238000" />
+      <workItem from="1646349994410" duration="1532000" />
     </task>
     <task id="LOCAL-00001" summary="Moving index file out of Pages folder">
       <created>1646104639064</created>
